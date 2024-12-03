@@ -8,7 +8,6 @@ gifts = [
 ]
 
 def main():
-    # Obtener los argumentos pasados desde PHP
     if len(sys.argv) < 2:
         print("No indices provided.")
         return
@@ -20,17 +19,14 @@ def main():
         print("Invalid input. Please enter valid indices separated by commas.")
         return
 
-    # Validar índices
     if any(i < 0 or i >= len(gifts) for i in selected_indices):
         print("One or more indices are out of range. Please try again.")
         return
 
-    # Calcular el código único usando OR bit a bit
     gift_code = 0
     for idx in selected_indices:
         gift_code |= (1 << idx)
     
-    # Generar la salida
     selected_gifts = ", ".join(gifts[idx] for idx in selected_indices)
     print("Webserver 1:")
     print("Available Gifts:")
