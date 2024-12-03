@@ -13,6 +13,6 @@
     }
     ?>
     <br>
-    <a href="gift_form.html">Go Back</a>
+    <a href="gift_form.php">Go Back</a>
 </body>
 </html>
